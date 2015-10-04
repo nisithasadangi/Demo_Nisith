@@ -1,0 +1,27 @@
+package com.nisith.newconverter;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Spinner;
+
+public class MainActivity extends Activity {
+	Spinner unitvalue1,unitvalue2;
+	EditText entvalue,resvalue;
+	Button convert;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        unitvalue1=(Spinner) findViewById(R.id.spinner1);
+        unitvalue2=(Spinner) findViewById(R.id.spinner2);
+        
+    }
+
+
+    
+    
+}

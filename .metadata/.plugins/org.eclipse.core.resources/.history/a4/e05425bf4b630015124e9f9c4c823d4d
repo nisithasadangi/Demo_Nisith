@@ -1,0 +1,57 @@
+package com.nisith.fab;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class MainActivity extends Activity implements OnClickListener {
+	EditText username,password;
+	Button login;
+	CheckBox rempswd;
+	TextView signup,forgotpswd;
+	String stusername="somanath";
+	String stpassword="1234";
+	
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        username=(EditText) findViewById(R.id.usernameeditText);
+        password=(EditText) findViewById(R.id.passwordeditText);
+        login=(Button) findViewById(R.id.loginbutton);
+        rempswd=(CheckBox) findViewById(R.id.rempswdcheckBox);
+        signup=(TextView) findViewById(R.id.signuptextView);
+        forgotpswd=(TextView) findViewById(R.id.forgotpswdtextView);
+        login.setOnClickListener(MainActivity.this);
+        
+        
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+
+	@Override
+	public void onClick(View arg0) {
+		if (stusername.equalsIgnoreCase(username.getText().toString()) && stpassword.equals(password.getText().toString())) {
+			Toast.makeText(MainActivity.this, "Login Successfull", Toast.LENGTH_SHORT).show();
+		}else {
+			Toast.makeText(MainActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
+		}
+		
+	}
+    
+}

@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#3366FF"
+    tools:context=".MainActivity" >
+
+    <EditText
+        android:id="@+id/passwordeditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/usernameeditText"
+        android:layout_below="@+id/usernameeditText"
+        android:layout_marginTop="43dp"
+        android:background="#ffffff"
+        android:ems="10"
+        android:hint="  Password" />
+
+    <EditText
+        android:id="@+id/usernameeditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="136dp"
+        android:background="#ffffff"
+        android:ems="10"
+        android:hint="  Username" >
+
+        <requestFocus />
+    </EditText>
+
+    <CheckBox
+        android:id="@+id/rempswdcheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passwordeditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:text="Remember Password" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/usernameeditText"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="25dp"
+        android:text="facebook"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffff"
+        android:textSize="55dp" />
+
+    <Button
+        android:id="@+id/loginbutton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rempswdcheckBox"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:textSize="25dp"
+        android:text="Login" />
+
+    <TextView
+        android:id="@+id/forgotpasswordtextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/signuptextView"
+        android:layout_alignBottom="@+id/signuptextView"
+        android:layout_alignRight="@+id/loginbutton"
+        android:text="Forgot Password"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/signuptextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/loginbutton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="16dp"
+        android:text="Signup"
+        android:textSize="20dp" />
+
+</RelativeLayout>

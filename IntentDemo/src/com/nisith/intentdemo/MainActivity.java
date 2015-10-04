@@ -1,0 +1,54 @@
+package com.nisith.intentdemo;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.content.Intent;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+public class MainActivity extends Activity {
+	EditText name,number;
+	Button next;
+	String ip;
+	Double no;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        name = (EditText) findViewById(R.id.nameeditText);
+        number = (EditText) findViewById(R.id.numbereditText);
+        next = (Button) findViewById(R.id.nextbutton);
+        
+        next.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				if (name.getText().length()==0) {
+					 ip = "Guest";
+				}else{
+					 ip = name.getText().toString();
+				}
+				if (number.getText().length()==0) {
+					 Toast.makeText(MainActivity.this, "You Have not entered any no", Toast.LENGTH_SHORT).show();
+					 
+				}else{
+		             no = Double.parseDouble(number.getText().toString());
+				}
+		    Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+		    intent.putExtra("Key1", ip);
+		    intent.putExtra("Key2", no);
+		    startActivity(intent);
+				
+			}
+		});
+        
+    }
+
+
+    
+    
+}

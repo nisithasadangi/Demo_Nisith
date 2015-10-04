@@ -1,0 +1,31 @@
+package com.nisith.intentdemo;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.content.Intent;
+import android.view.Menu;
+import android.widget.TextView;
+
+public class SecondActivity extends Activity {
+	TextView name,number;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_second);
+		name=(TextView) findViewById(R.id.iptextView);
+		number= (TextView) findViewById(R.id.notextView);
+		
+		Intent intent = getIntent();
+		Bundle b1 = intent.getExtras();
+		String ip = b1.getString("Key1");
+		double no = b1.getDouble("Key2");
+		double multiple = no*5;
+		name.setText("Hello"+" "+ip);
+		number.setText(no+"*5="+multiple);
+		
+	}
+
+
+
+}

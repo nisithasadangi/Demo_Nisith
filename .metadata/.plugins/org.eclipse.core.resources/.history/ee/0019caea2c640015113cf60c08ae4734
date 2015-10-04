@@ -1,0 +1,30 @@
+package com.nisith.converter;
+
+public class ConvertTemp {
+	static double c,f,k;
+	static double c2f (double a){
+		f=a*33.8;
+		return f;
+	}
+	static double c2k (double a){
+		k=a*274.15;
+		return k;
+	}
+     static double f2c (double a){
+		c=a/33.8;
+		return c;
+	}
+     static double f2k (double a){
+ 		k=a*255.928;
+ 		return k;
+ 	}
+     static double k2f (double a){
+ 		f=a/255.928;
+ 		return f;
+ 	}
+     static double k2c (double a){
+ 		c=a/274.15;
+ 		return c;
+ 	}
+
+}

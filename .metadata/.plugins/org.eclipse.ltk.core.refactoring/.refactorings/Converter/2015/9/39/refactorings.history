@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;valueeditText&apos; in &apos;com.nisith.converter.R.id&apos; to &apos;entervalueeditText&apos;&#x0D;&#x0A;- Original project: &apos;Converter&apos;&#x0D;&#x0A;- Original element: &apos;com.nisith.converter.R.id.valueeditText&apos;&#x0D;&#x0A;- Renamed element: &apos;com.nisith.converter.R.id.entervalueeditText&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="true" description="Rename field &apos;valueeditText&apos;" flags="589830" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/gen&lt;com.nisith.converter{R.java[R[id^valueeditText" name="entervalueeditText" references="true" setter="false" stamp="1443247213086" textual="false" version="1.0"/>
+</session>
