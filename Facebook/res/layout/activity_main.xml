@@ -9,62 +9,6 @@
     android:background="#3366FF"
     tools:context=".MainActivity" >
 
-    <EditText
-        android:id="@+id/passwordeditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/usernameeditText"
-        android:layout_below="@+id/usernameeditText"
-        android:layout_marginTop="43dp"
-        android:background="#ffffff"
-        android:ems="10"
-        android:hint="  Password" />
-
-    <EditText
-        android:id="@+id/usernameeditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="136dp"
-        android:background="#ffffff"
-        android:ems="10"
-        android:hint="  Username" >
-
-        <requestFocus />
-    </EditText>
-
-    <CheckBox
-        android:id="@+id/rempswdcheckBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/passwordeditText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="21dp"
-        android:text="Remember Password" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/usernameeditText"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="25dp"
-        android:text="facebook"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#ffffff"
-        android:textSize="55dp" />
-
-    <Button
-        android:id="@+id/loginbutton"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/rempswdcheckBox"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
-        android:textSize="25dp"
-        android:text="Login" />
-
     <TextView
         android:id="@+id/forgotpasswordtextView"
         android:layout_width="wrap_content"
@@ -85,5 +29,70 @@
         android:layout_marginLeft="16dp"
         android:text="Signup"
         android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/usernameeditText"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:text="facebook"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffff"
+        android:textSize="55dp" />
+
+    <EditText
+        android:id="@+id/usernameeditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rempswdcheckBox"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="26dp"
+        android:background="#ffffff"
+        android:ems="10"
+        android:hint="  Username" />
+
+    <Button
+        android:id="@+id/loginbutton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/forgotpasswordtextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp"
+        android:text="Login"
+        android:textSize="25dp" />
+
+    <CheckBox
+        android:id="@+id/rempswdcheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/loginbutton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:text="Remember Password" />
+
+    <EditText
+        android:id="@+id/passwordeditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/usernameeditText"
+        android:layout_below="@+id/usernameeditText"
+        android:layout_marginTop="21dp"
+        android:background="#ffffff"
+        android:ems="10"
+        android:hint="  Password" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/editText_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/passwordeditText"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:hint="Name" />
 
 </RelativeLayout>

@@ -3,6 +3,7 @@ package com.nisith.facebook;
 import android.os.Bundle;
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -14,7 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity implements OnClickListener{
-	EditText username,password;
+	EditText username,password,name;
 	Button login;
 	TextView signup,forgotpswd;
 	CheckBox rempswd;
@@ -31,6 +32,7 @@ public class MainActivity extends Activity implements OnClickListener{
         rempswd=(CheckBox) findViewById(R.id.rempswdcheckBox);
         signup=(TextView) findViewById(R.id.signuptextView);
         forgotpswd=(TextView) findViewById(R.id.forgotpasswordtextView);
+        name = (EditText) findViewById(R.id.editText_name);
         login.setOnClickListener(this);
         forgotpswd.setOnClickListener(new OnClickListener() {
 			
@@ -47,16 +49,19 @@ public class MainActivity extends Activity implements OnClickListener{
 			}
 		});
     }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
 	@SuppressLint("ShowToast") @Override
 	public void onClick(View arg0) {
 		if(stusername.equalsIgnoreCase(username.getText().toString()) && stpswd.equals(password.getText().toString())){
 			Toast.makeText(this, "Login Sucessfull", Toast.LENGTH_SHORT).show();
+			
+			Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+			String stname = name.getText().toString();
+			if (stname.length() == 0) {
+				stname = "Guest";
+			}
+			intent.putExtra("Key1", stname);
+			startActivity(intent);
+			
 			}else{
 				Toast.makeText(this, "Login Failed", Toast.LENGTH_SHORT).show();
 		}
